@@ -1,0 +1,4 @@
+docx
+pandas
+MailMerge
+openpyxl
