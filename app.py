@@ -12,10 +12,11 @@ sheet = wb["Bookmarks"]
 # find the last row for iteration / does not matter if not using for loop
 
 max_column = sheet.max_column
-
+# Can use pandas to dict to make dictionary to make easier for sending to docx 
 # using mailmerge
 template = ("Report_template.docx")
 document1 = MailMerge(template)
+
 for i in range(2, max_column):
 	document1.merge(
 	NAME = str(sheet.cell(row = 2, column = i).value),	
@@ -33,9 +34,10 @@ for i in range(2, max_column):
 	Approved_by = str(sheet.cell(row = 14, column = i).value)
 	)
 
+# this writer will name the file for each row / if you have multiple customer files to send
 
 # create new file based on the first line in the excel doc
 document1.write("NewFile " + str(sheet.cell(row = 1, column = 1).value)+ ".docx")
-
-
+# use this line if you want constant name
+# document1.write("new_file.docx")
 
