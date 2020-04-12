@@ -1,4 +1,4 @@
-h1 exceltodocx
+<h1>exceltodocx
 H2 use pandas or openpyxl to open excel doc and read lines
 ## H2 use mail merge to insert column names into docx template
 
